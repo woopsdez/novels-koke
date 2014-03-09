@@ -1,5 +1,27 @@
-;チュートリアル用スクリプトファイル
 *start
+
+誰と話しますか？[l][cm]
+
+[link storage="watamura.ks" target=*select1]綿村さん[endlink][r]
+[link storage="ishijima.ks" target=*select2]石嶋さん[endlink][r]
+[link storage="yuki.ks" target=*select3]ユキさん[endlink][r]
+[link storage="fujino.ks" target=*select4]藤野さん[endlink][r]
+[link storage="hamada.ks" target=*select5]はまだくん[endlink][r]
+[link storage="masato.ks" target=*select6]まさとくん[endlink][r]
+[link storage="yamazaki.ks" target=*select7]山崎さん[endlink][r]
+[link storage="muto.ks" target=*select8]武藤さん[endlink][r]
+
+[s]
+
+*select1 
+[cm]
+「選択肢１」がクリックされました[l]
+@jump target=*common
+
+*select2 
+[cm]
+「選択肢２」がクリックされました[l]
+@jump target=*common
 
 [wait time=200]
 [position height=160 top=300]
@@ -13,6 +35,7 @@
 [charaset layer=0 right=0 top=0 time= 1000 storage = yamazaki.png] 
 
 [playbgm storage=n25.mp3]
+
 
 コワーキングスペース「こけむさズ」…。[l][cm]
 フリーランスの人たちが集まって一緒に仕事したりしてるって聞いて[l][r] 
@@ -393,3 +416,15 @@
 「結果的にそうなっててもう数年やってるから」[l][r]
 「彼の話もまたおもしろいと思うよ」[l][r]
 「気が向いたらでいいから、みんなと話してみてね」[l][r][cm]
+
+*common
+[cm]
+
+アナタも、[l][r]
+近くにコワーキングスペースがあるなら[l][r]
+勇気を出して覗いてみると何かあるかも！[l][cm]
+
+そう…。[l]おもちゃ箱をひっくり返したような[l][r]
+そんなワクワクが。[l][cm]
+
+おしまい。END。
