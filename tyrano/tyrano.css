@@ -1,150 +1,171 @@
-/*reset css */
-
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,
-form,fieldset,input,textarea,p,blockquote,th,td{
-    padding:0;
-    margin:0;
-}
-table{
-    border-collapse: collapse;
-    border-spacing:0;
-}
-fieldset,img{
-    border:0;
-}
-address,caption,cite,code,dfn,em,strong,th,var{
-    font-weight:normal;
-    font-style:normal;
-}
-ol,ul{
-    list-style:none;
-}
-caption,th{
-    text-align:left;
-}
-h1,h2,h3,h4,h5,h6{
-    font-weight:normal;
-    font-size:100%;
-}
-q:before,q:after{
-    content:'';
-}
-abbr,acronym{
-    border:0;
-}
-
-
+@charset "UTF-8";
 /*smart novel original css */
-
-.vertical_text{
-
-    font-family:'@ＭＳ 明朝';
-    /*color:white;*/
-    writing-mode:vertical-rl ;
-    -webkit-writing-mode:vertical-rl ; 
-    float:right;
-    /*height : 960px ;*/
-
-}
-
+.vertical_text {
+  font-family: '$font-family-sans-serif';
+  /*color:white;*/
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  float: right;
+  /*height : 960px ;*/ }
 
 .layer_menu {
-    display:none;
-    font-size:1.3em;
-    font-weight:bold;
-    position:absolute;
-    width:100%;
-    height:100%;
-}
+  display: none;
+  font-size: 1.3em;
+  font-weight: bold;
+  position: absolute;
+  width: 100%;
+  height: 100%; }
 
-.save_menu_font{
-    
-    color:gray;
-    
-}
-
-
-
+.save_menu_font {
+  color: gray; }
 
 /*メニュ－ボタン系*/
-.menu_item {position:relative;margin-top:3%;text-align:center;cursor:pointer}
-.menu_item img {width:auto;max-width:80%;max-height:10%;}
-.display_menu .button:first-child {margin-top:0;}
-.display_menu{
-    overflow:visible;padding:0;
-    position:relative;
-    /*overflow:visible;padding:2%;display:table-cell;vertical-align:middle*/
-}
+.menu_item {
+  position: relative;
+  margin-top: 3%;
+  text-align: center;
+  cursor: pointer; }
+
+.menu_item img {
+  width: auto;
+  max-width: 80%;
+  max-height: 10%; }
+
+.display_menu .button:first-child {
+  margin-top: 0; }
+
+.display_menu {
+  overflow: visible;
+  padding: 0;
+  position: relative;
+  /*overflow:visible;padding:2%;display:table-cell;vertical-align:middle*/ }
 
 /*セーブ・ロードのテキスト部分の文字のスタイルを指定できます*/
 .save_menu_date_font {
-    font-size:10px;
-}
+  font-size: 10px; }
 
 /*セーブ・ロード画面のテキスト部分のスタイルを指定できます。*/
-.save_menu_text_font{
-    font-size:14px;
-}
+.save_menu_text_font {
+  font-size: 14px; }
 
 /*セーブ・ロードデータの行間などが調整できます*/
-.save_display_area{
-    margin-top:20px;
-}
+.save_display_area {
+  margin-top: 20px; }
 
+.layer_event_click {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background-color: rgba(0, 0, 0, 0); }
 
-
-.layer_event_click{
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    background-color: rgba(0, 0, 0, 0);
-}
-
-.button_menu{
-    position:absolute;
-    z-index:99999;
-    top:20px;
-    cursor:pointer;    
-}
+.button_menu {
+  position: absolute;
+  z-index: 99999;
+  top: 20px;
+  cursor: pointer; }
 
 /*
  CSSを修正することで、ゲーム画面をカスタマイズすることが可能です
  * */
-
 /*ゲーム枠の外側の色を指定します*/
+/* 背景処理のための高さを調整 */
+html, body {
+  height: 100%; }
 
-body{
-    background-color:black;        
-    -webkit-tap-highlight-color: transparent; 
+body {
+  background: #ffe8d2 url("../assets/images/bg-kokemusaz.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-tap-highlight-color: transparent; }
 
-}
+.inverse {
+  background: black url("../assets/images/bg-kokemusaz-inverse.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
 
+.container {
+  overflow: hidden;
+  margin: 0 auto; }
+  @media screen and (min-width: 960px) {
+    .container {
+      width: 960px; } }
+  @media screen and (max-width: 480px) {
+    .container {
+      width: 100%; } }
+
+.logo {
+  float: left; }
+
+h1 img {
+  max-width: 100%; }
+
+.navigation {
+  float: right; }
+
+.navigation li {
+  display: inline-block;
+  margin: 0 10px; }
+
+.navigation li a {
+  color: #352625;
+  text-decoration: none; }
+
+.navigation li a:hover {
+  color: #6b4845;
+  text-decoration: underline; }
+
+.introduction {
+  float: right; }
+
+.introduction p {
+  margin-top: 20px;
+  padding: 24px 12px;
+  background: #FFF;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
+
+.introduction a {
+  display: block;
+  float: right;
+  width: 15em;
+  margin-top: -20px;
+  margin-right: 20px;
+  padding: 12px 12px;
+  color: #FFF;
+  text-align: center;
+  text-decoration: none;
+  background: #352625;
+  -webkit-border-radius: 6px;
+  border-radius: 6px; }
+
+.introduction a:hover {
+  background: #000; }
 
 /*次へのクリックを促すアイコン*/
-
-.img_next{
-    padding-left:3px;
-}
+.img_next {
+  padding-left: 3px; }
 
 /*ウェブフォントを使用する場合はここ*/
-
 /* Firefox, Opera, Safari */
 @font-face {
-font-family:webfont;
-src:url("../data/others/TanukiMagic.ttf") format("truetype");
-}
-/*IE*/
-@font-face {
-font-family: webfont;
-src: url("./data/others/TanukiMagic.eot");
-}
+  font-family: mplus-1p-regular;
+  src: url("http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf") format("truetype"); }
 
 /*テキストボックスの共通スタイル*/
-.text_box{
-    
-}
+.text_box {
+  font-family: "mplus-1p-regular"; }
 
-.tyrano_base{
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-}
-
+.tyrano_base {
+  position: relative;
+  overflow: hidden;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none; }
+  @media screen and (min-width: 768px) {
+    .tyrano_base {
+      margin: 40px auto; } }
+  @media screen and (max-width: 768px) {
+    .tyrano_base {
+      width: 100%; } }

@@ -18,7 +18,7 @@
 // ◆ タイトル
 // ウィンドウのキャプション(タイトル)および
 // ブラウザの場合は、タイトルに指定されます
-;System.title = "ティラノスクリプト";
+System.title = "ノベルでこけむさズ";
 
 
 // ◆ プロジェクト一意の識別名称　ティラノスクリプト独自設定
@@ -173,7 +173,7 @@ function KAGWindow_config()
 // ここをtrueにしておくことでブラウザのコンソールログに各種値が出力されるようになります
 //　ゲームリリース時は必ずfalseにしておきましょう
 
-;debugMenu.visible = true;
+debugMenu.visible = true;
 
 
 //-------------------------------------------- メッセージレイヤの設定 -----
@@ -267,7 +267,7 @@ function MessageLayer_config()
 // (あるいはシステム変数ファイルを消してください)
 // カンマで区切って複数のフォントを指定することができます。その場合は、最初
 // の方に書いたフォントが存在すれば、優先されます。
-;userFace = "ＭＳ Ｐ明朝"; // deffont タグの face 属性に相当
+userFace = "mplus-1p-regular"; // deffont タグの face 属性に相当
 
 
 // ◆ 文字の色
@@ -277,7 +277,7 @@ function MessageLayer_config()
 
 // ◆ 文字をボールドにするか
 // する場合は true, しない場合は false を指定します。
-;defaultBold = true; // deffont タグの bold 属性に相当
+defaultBold = false; // deffont タグの bold 属性に相当
 
 
 // ◆ ルビサイズ

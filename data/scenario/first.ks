@@ -1,29 +1,33 @@
 *start
 
-誰と話しますか？[l][cm]
+;メッセージレイヤを非表示にしておく
+@layopt layer=message0 visible=false
 
-[link storage="watamura.ks" target=*select1]綿村さん[endlink][r]
-[link storage="ishijima.ks" target=*select2]石嶋さん[endlink][r]
-[link storage="yuki.ks" target=*select3]ユキさん[endlink][r]
-[link storage="fujino.ks" target=*select4]藤野さん[endlink][r]
-[link storage="hamada.ks" target=*select5]はまだくん[endlink][r]
-[link storage="masato.ks" target=*select6]まさとくん[endlink][r]
-[link storage="yamazaki.ks" target=*select7]山崎さん[endlink][r]
-[link storage="muto.ks" target=*select8]武藤さん[endlink][r]
+;背景画像を設定 
+[image layer="base" page="fore" storage=title.jpg]
 
+;スタートボタン
+[locate x=200 y=300 ]
+[button graphic="btn-start.png" target=*first]
+[locate x=200 y=380 ]
+[button graphic="btn-load.png" target=*loadmenu]
+
+;押されるまでスタートしない
 [s]
 
-*select1 
+;つづきからボタンが押された場合。ロード画面を表示
+*loadmenu
 [cm]
-「選択肢１」がクリックされました[l]
-@jump target=*common
+[showload]
 
-*select2 
+[jump target=*title]
+[s]
+
+;最初から
+*first
 [cm]
-「選択肢２」がクリックされました[l]
-@jump target=*common
 
-[wait time=200]
+[wait time=0]
 [position height=160 top=300]
 
 [call target=*start storage="tyrano.ks"]
@@ -36,6 +40,22 @@
 
 [playbgm storage=n25.mp3]
 
+@layopt layer=message0 visible=true
+
+誰と話しますか？[r][l]
+[link storage=watamura.ks]【1】綿村[endlink][r]
+[link storage=yuki.ks]【2】ゆきちゃん[endlink][r]
+[link storage=mame.ks]【3】まめ[endlink][r]
+[link storage=taiju.ks]【4】武藤さん[endlink][r]
+[link storage=yamazaki.ks]【5】山崎さん[endlink][r]
+[link storage=fujinon.ks]【6】ふじのさん[endlink][r]
+[link storage=masato.ks]【7】まさとくん[endlink][r]
+[link storage=hamada.ks]【8】はまだくん[endlink][r]
+[link target=*common]【9】通常ルート[endlink][r]
+[s]
+
+*common 
+[cm] 
 
 コワーキングスペース「こけむさズ」…。[l][cm]
 フリーランスの人たちが集まって一緒に仕事したりしてるって聞いて[l][r] 
@@ -322,7 +342,7 @@
 そうだよね。[l][r]
 知らない人同士でこんなに仲良くしてる訳ないか…。[l][r][cm]
 
-「主人公さんは今日何で知ってここに来てくれたんですか？」[l][r][cm]
+「[emb exp="f.username"]さんは今日何で知ってここに来てくれたんですか？」[l][r][cm]
 「オーナーが言うのもなんだけど、ここってほら、アレでしょ？」[l][r][cm]
 
 自覚はしてるんだ。[l][r][cm]
@@ -417,8 +437,13 @@
 「彼の話もまたおもしろいと思うよ」[l][r]
 「気が向いたらでいいから、みんなと話してみてね」[l][r][cm]
 
-*common
+
+*ending
 [cm]
+
+最初は変なところだし、不安もたくさんだったけど[l][r]
+ただ仕事しごとするんじゃなくて[l][r]
+誰かに話しかけてみて本当によかった。[l][r][cm]
 
 アナタも、[l][r]
 近くにコワーキングスペースがあるなら[l][r]
