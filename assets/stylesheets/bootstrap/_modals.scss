@@ -39,6 +39,9 @@
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto;
+  @media screen and (min-width: $screen-sm-min) {
+    overflow-y: hidden;
+  }
 }
 
 // Shell div to position the modal with bottom padding
@@ -134,7 +137,7 @@
   // Automatically set modal's width for larger viewports
   .modal-dialog {
     width: $modal-md;
-    margin: 230px auto;
+    margin: 0 auto;
   }
   // Modal sizes
   .modal-sm { width: $modal-sm; }

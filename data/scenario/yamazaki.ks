@@ -1,22 +1,27 @@
 ;山崎ルート：酔っ払ってぐずぐずの山崎さんの口の中に指突っ込んで解放してあげて親密に > ゆるオフィスとしての参加
 ;■ 山崎さんの仕事を聞く
 
-*select1 
 [cm]
 
-[wait time=200]
-[position height=160 top=300]
+;レイヤーの非表示
+[layopt layer="message0" visible=false]
 
-[call target=*start storage="tyrano.ks"]
+[wait time=0]
+[playbgm storage=n25.mp3]
 
 ;背景画像の切り替え実行
-[back storage=building.jpg time=3000]
+[back storage=building.jpg time=1000]
 
 ;キャラクター登場
-[charaset layer=0 right=0 top=0 time= 1000 storage = yamazaki.png] 
+[charaset layer=0 right=0 top=0 time=1000 storage = yamazaki.png] 
 
-[playbgm storage=n25.mp3]
-[cm]
+;メッセージレイヤの定義
+[layopt layer="message0" visible=true]
+[position layer=message0 width=640 height=187 top=293 left=0 page=fore frame="frame.png" margint="40" marginl="20" marginr="40" marginb="20"]
+
+;キャラクタ名定義
+[ptext name="chara_name_area" layer=message0 width="200" color=white x=95 y=297 size=24]
+[chara_config ptext="chara_name_area"]
 
 コワーキングスペースって、仕事場だよね…？[l][r]
 でもあの人、ずっとゲームしてる…。[l][r]
@@ -622,4 +627,4 @@ Aさんともし結婚したら[l][r]
 こんなこと。想像もしなかったな。[l][r]
 [cm]
 
-@jump storage=first.ks target=*ending
+@jump storage=ending.ks

@@ -49,10 +49,5 @@ tyrano.base ={
         $(".tyrano_base").css("-webkit-transform","scale("+scale_f+") ");
     
         
-    },
-    
-    test:function(){
-        //alert("tyrano test");
-    }
-    
+    },    
 };

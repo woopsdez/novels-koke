@@ -4701,6 +4701,9 @@ button.close {
 .modal-open .modal {
   overflow-x: hidden;
   overflow-y: auto; }
+  @media screen and (min-width: 768px) {
+    .modal-open .modal {
+      overflow-y: hidden; } }
 
 .modal-dialog {
   position: relative;
@@ -4768,7 +4771,7 @@ button.close {
 @media (min-width: 768px) {
   .modal-dialog {
     width: 600px;
-    margin: 230px auto; }
+    margin: 0 auto; }
 
   .modal-sm {
     width: 300px; } }

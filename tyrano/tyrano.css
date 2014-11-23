@@ -2,11 +2,9 @@
 /*smart novel original css */
 .vertical_text {
   font-family: '$font-family-sans-serif';
-  /*color:white;*/
   writing-mode: vertical-rl;
   -webkit-writing-mode: vertical-rl;
-  float: right;
-  /*height : 960px ;*/ }
+  float: right; }
 
 .layer_menu {
   display: none;
@@ -25,11 +23,10 @@
   margin-top: 3%;
   text-align: center;
   cursor: pointer; }
-
-.menu_item img {
-  width: auto;
-  max-width: 80%;
-  max-height: 10%; }
+  .menu_item img {
+    width: auto;
+    max-width: 80%;
+    max-height: 10%; }
 
 .display_menu .button:first-child {
   margin-top: 0; }
@@ -37,8 +34,7 @@
 .display_menu {
   overflow: visible;
   padding: 0;
-  position: relative;
-  /*overflow:visible;padding:2%;display:table-cell;vertical-align:middle*/ }
+  position: relative; }
 
 /*セーブ・ロードのテキスト部分の文字のスタイルを指定できます*/
 .save_menu_date_font {
@@ -59,87 +55,9 @@
 .button_menu {
   position: absolute;
   z-index: 99999;
-  top: 20px;
+  top: 0;
+  right: 0;
   cursor: pointer; }
-
-/*
- CSSを修正することで、ゲーム画面をカスタマイズすることが可能です
- * */
-/*ゲーム枠の外側の色を指定します*/
-/* 背景処理のための高さを調整 */
-html, body {
-  height: 100%; }
-
-body {
-  background: #ffe8d2 url("../assets/images/bg-kokemusaz.jpg") no-repeat top center;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  -webkit-tap-highlight-color: transparent; }
-
-.inverse {
-  background: black url("../assets/images/bg-kokemusaz-inverse.jpg") no-repeat top center;
-  -webkit-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-
-.container {
-  overflow: hidden;
-  margin: 0 auto; }
-  @media screen and (min-width: 960px) {
-    .container {
-      width: 960px; } }
-  @media screen and (max-width: 480px) {
-    .container {
-      width: 100%; } }
-
-.logo {
-  float: left; }
-
-h1 img {
-  max-width: 100%; }
-
-.navigation {
-  float: right; }
-
-.navigation li {
-  display: inline-block;
-  margin: 0 10px; }
-
-.navigation li a {
-  color: #352625;
-  text-decoration: none; }
-
-.navigation li a:hover {
-  color: #6b4845;
-  text-decoration: underline; }
-
-.introduction {
-  float: right; }
-
-.introduction p {
-  margin-top: 20px;
-  padding: 24px 12px;
-  background: #FFF;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-
-.introduction a {
-  display: block;
-  float: right;
-  width: 15em;
-  margin-top: -20px;
-  margin-right: 20px;
-  padding: 12px 12px;
-  color: #FFF;
-  text-align: center;
-  text-decoration: none;
-  background: #352625;
-  -webkit-border-radius: 6px;
-  border-radius: 6px; }
-
-.introduction a:hover {
-  background: #000; }
 
 /*次へのクリックを促すアイコン*/
 .img_next {
@@ -152,9 +70,6 @@ h1 img {
   src: url("http://mplus-fonts.sourceforge.jp/webfonts/mplus-1p-regular.ttf") format("truetype"); }
 
 /*テキストボックスの共通スタイル*/
-.text_box {
-  font-family: "mplus-1p-regular"; }
-
 .tyrano_base {
   position: relative;
   overflow: hidden;
@@ -169,3 +84,49 @@ h1 img {
   @media screen and (max-width: 768px) {
     .tyrano_base {
       width: 100%; } }
+
+/*
+ CSSを修正することで、ゲーム画面をカスタマイズすることが可能です
+ * */
+/* 背景処理のための高さを調整 */
+html, body {
+  height: 100%; }
+
+body {
+  background: #ffe8d2 url("../assets/images/bg-kokemusaz.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-tap-highlight-color: transparent; }
+
+.nav.navbar-nav li a {
+  color: #352625;
+  text-decoration: none; }
+  .nav.navbar-nav li a:hover {
+    color: #6b4845;
+    text-decoration: underline; }
+
+.introduction {
+  margin-top: 60px; }
+  .introduction p {
+    margin-top: 20px;
+    padding: 24px 12px;
+    background: #FFF;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+  .introduction a {
+    display: block;
+    float: right;
+    width: 15em;
+    margin-top: -20px;
+    margin-right: 20px;
+    padding: 12px 12px;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    background: #352625;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+    .introduction a:hover {
+      color: #FFF;
+      background: #000; }

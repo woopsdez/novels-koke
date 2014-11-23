@@ -18,12 +18,12 @@
 // ◆ タイトル
 // ウィンドウのキャプション(タイトル)および
 // ブラウザの場合は、タイトルに指定されます
-System.title = "ノベルでこけむさズ";
+;System.title = "ノベルでこけむさズ";
 
 
 // ◆ プロジェクト一意の識別名称　ティラノスクリプト独自設定
 // プロジェクト固有の文字列を指定してください。特に同一ドメイン上にプロジェクトを配置する場合は必ず指定してください
-;projectID = tyranoproject;
+;projectID = novels-koke;
 
 
 //-------------------------------------------- ウィンドウや動作の設定 -----
@@ -71,10 +71,9 @@ function KAGWindow_config()
 // ◆ コンフィグ（メニュー）機能表示
 // セーブ・ロードやタイトルに戻るといった一連の機能を表示するかを指定します
 ;configVisible = true;  //コンフィグアイコンを表示
-;configLeft    = -1     //コンフィグアイコンの左位置を指定できます。-1の場合は画面右下
-;configTop     = -1     //コンフィグアイコンの上位置を指定できます。-1の場合は画面右下
-
-
+configLeft    = 0
+//コンフィグアイコンの左位置を指定できます。-1の場合は画面右下
+configTop     = -1     //コンフィグアイコンの上位置を指定できます。-1の場合は画面右下
 
 // ◆ ラベル記録
 // 自動的に「読んだ」ラベルを記録するかどうかを指定します。
@@ -205,8 +204,8 @@ function MessageLayer_config()
 // メッセージレイヤの色を指定します。frameOpacity には 0 ～ 255 の数値で、
 // 不透明度を指定します。メッセージ枠用の画像が指定されている場合は無効で
 // す。
-;frameColor = 0x000000; // position タグの color 属性に相当
-;frameOpacity = 128;  // position タグの opacity 属性に相当
+;frameColor = 0xFFFFFF; // position タグの color 属性に相当
+;frameOpacity = 200;  // position タグの opacity 属性に相当
 
 
 // ◆ 左右上下マージン
@@ -272,7 +271,7 @@ userFace = "mplus-1p-regular"; // deffont タグの face 属性に相当
 
 // ◆ 文字の色
 // デフォルトの文字の色を 0xRRGGBB 形式で指定します。
-;defaultChColor = 0xffffff;  // deffont タグの color 属性に相当
+;defaultChColor = 0x352625;  // deffont タグの color 属性に相当
 
 
 // ◆ 文字をボールドにするか
