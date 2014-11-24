@@ -20,6 +20,11 @@
 
 ;/// 主人公
 [chara_new name="aoi" storage="heroine-normal.png" jname="あおい"]
+[chara_face name="aoi" face="angry" storage="heroine-angry.png"]
+[chara_face name="aoi" face="smile" storage="heroine-smile.png"]
+[chara_face name="aoi" face="happy" storage="heroine-happy.png"]
+[chara_face name="aoi" face="sad" storage="heroine-sad.png"]
+[chara_face name="aoi" face="tired" storage="heroine-tired.png"]
 
 ;/// 綿村
 [chara_new name="watamura" storage="watamura.png" jname="綿村さん"]
@@ -71,6 +76,11 @@
 
 ;メッセージ表示
 @layopt layer=message0 visible=true
+;ボタン定義
+[button name="role_button" role="skip" graphic="button/skip.png" x=320 y=292]
+[button name="role_button" role="save" graphic="button/save.png" x=390 y=292]
+[button name="role_button" role="load" graphic="button/load.png" x=460 y=292]
+[button name="role_button" role="backlog" graphic="button/log.png" x=530 y=292]
  
 #主人公
 コワーキングスペース「こけむさズ…。[l][cm]
@@ -83,7 +93,6 @@
 [back storage=koke-entrance.jpg time=1000]
 
 ;キャラクター登場
-[chara_show name="aoi" page="back" left="350"]
 [chara_mod name="aoi" storage="heroine-tired.png"]
 
 なんだか入りづらいところだなぁ…。[l][r]
@@ -99,8 +108,6 @@
 ゆるふわキャラになるんだから！[l][cm]
 
 「えいっ[l][cm]
-
-[skipstart]
 
 [chararemove layer=0]
 

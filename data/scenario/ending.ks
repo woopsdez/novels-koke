@@ -23,18 +23,4 @@
 おしまい。END。
 [cm]
 
-;=========================
-; 初期化
-;=========================
-
-[chara_hide name="aoi" ]
-[chara_hide name="watamura" ]
-[chara_hide name="yuki" ]
-[chara_hide name="ishijima" ]
-[chara_hide name="muto" ]
-[chara_hide name="yamazaki" ]
-[chara_hide name="fujinon" ]
-[chara_hide name="hamada" ]
-[chara_hide name="masato" ]
-
 @jump storage=first.ks
