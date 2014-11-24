@@ -1,0 +1,41 @@
+html, body {
+  height: 100%; }
+
+body {
+  background: #ffe8d2 url("../../images/bg-kokemusaz.jpg") no-repeat top center;
+  -webkit-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  -webkit-tap-highlight-color: transparent; }
+
+.nav.navbar-nav li a {
+  color: #352625;
+  text-decoration: none; }
+  .nav.navbar-nav li a:hover {
+    color: #6b4845;
+    text-decoration: underline; }
+
+.introduction {
+  margin-top: 60px; }
+  .introduction p {
+    margin-top: 20px;
+    padding: 24px 12px;
+    background: #FFF;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+  .introduction a {
+    display: block;
+    float: right;
+    width: 15em;
+    margin-top: -20px;
+    margin-right: 20px;
+    padding: 12px 12px;
+    color: #FFF;
+    text-align: center;
+    text-decoration: none;
+    background: #352625;
+    -webkit-border-radius: 6px;
+    border-radius: 6px; }
+    .introduction a:hover {
+      color: #FFF;
+      background: #000; }

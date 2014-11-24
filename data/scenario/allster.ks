@@ -9,8 +9,6 @@
 [call storage="tyrano.ks"]
 [call storage="novel_booster.ks"]
 
-[showmenubutton]
-
 ;レイヤーの非表示
 [layopt layer="message0" visible=false]
 

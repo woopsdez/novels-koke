@@ -1,9 +1,6 @@
 
 ;ティラノスクリプト こけむさズ
 
-;メニューボタン非表示
-[hidemenubutton]
-
 ;ゲームに必要なライブラリ読み込み
 [call storage="tyrano.ks"]
 [call storage="novel_booster.ks"]
