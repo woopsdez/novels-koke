@@ -1,25 +1,31 @@
-<div class="menu-sabe">
+<div class="menu-save">
 	<div class="container-fluid">
 		<div class="row">
+			{{for array_save}}
 			<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-				<div class='save_list'>
-					{{for array_save}}
-						<li class='save_display_area save_list_item' data-num='{{:num}}'>
-							<span class='save_list_item_thumb'>
-							{{if img_data != ""}}
-								<img src="{{:img_data}}">
-							{{/if}}
-							</span>
-							
-							
-							<span class='save_list_item_area'>
-								<span class='save_list_item_date'>{{:save_date}}</span>
-								<span class='save_list_item_text'>{{:title}}</span>
-							</span>
-						</li>
-					{{/for}}
-				</div>
+					<div class="thumbnail save_display_area" data-num="{{:num}}">
+						<img
+						src="
+						{{if img_data != ""}}
+							{{:img_data}}
+						{{else}}
+							http://dummyimage.com/640x480/efefef/ddd&text=no+save
+						{{/if}}
+						"
+						class="img-responsive"
+						alt="{{:num}}"
+						title="{{:title}} / {{:save_date}}"
+						data-toggle="tooltip"
+						data-placement="bottom"
+						>
+					</div>
 			</div>
+			{{/for}}
 		</div>
 	</div>
 </div>
+<script>
+	$(function () {
+  	$('[data-toggle="tooltip"]').tooltip()
+	});
+</script>
