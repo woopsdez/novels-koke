@@ -62,15 +62,13 @@
 ; シナリオ開始
 ;=========================
 
-;[playbgm storage=n25.mp3]
-
 ;背景画像の切り替え実行
 [back storage=building.jpg time=1000]
 
 ;キャラクター登場
 [chara_show name="aoi" page="back" left="350"]
 
-[wait time=1000]
+[wait time=500]
 
 ;メッセージ表示
 @layopt layer=message0 visible=true

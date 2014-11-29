@@ -42,11 +42,21 @@
   -webkit-background-size: cover;
   -o-background-size: cover;
   background-size: cover; }
+  .layer_menu .menu {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0 0 410px;
+    border: 1px solid #000; }
 
-.display_menu {
-  overflow: visible;
-  padding: 0;
-  position: relative; }
+.menu_close {
+  position: absolute;
+  top: 0;
+  right: 0; }
+
+.menu-btn {
+  margin: 0 auto;
+  margin-bottom: 20px; }
 
 .button_menu {
   position: absolute;
@@ -63,12 +73,3 @@
   background: rgba(255, 255, 255, 0.8);
   border: 1px solid #dfdfdf;
   border-radius: 10px; }
-
-.menu_close {
-  position: absolute;
-  top: 0px;
-  right: 0; }
-
-.menu-btn {
-  margin: 0 auto;
-  margin-top: 20px; }
