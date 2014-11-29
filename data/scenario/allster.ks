@@ -62,7 +62,7 @@
 ; シナリオ開始
 ;=========================
 
-[playbgm storage=n25.mp3]
+;[playbgm storage=n25.mp3]
 
 ;背景画像の切り替え実行
 [back storage=building.jpg time=1000]
